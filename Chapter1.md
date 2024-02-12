@@ -26,7 +26,7 @@
 
 5. On early computers, every byte of data read or written was handled by the CPU (i.e., there was no DMA). What implications does this have for multiprogramming?  
 
-    * Without a Direct Memory Access (DMA) chip that can control the flows of bits between memory, the CPU would be fully occupied with handling I/O jobs. 
+    * Without a Direct Memory Access (DMA) chip that can control the flows of bits between memory, the CPU would be fully occupied with handling I/O jobs.
 
     * **The reason multiprogramming exists in the first place, is to give the CPU something to do while waiting for I/O to complete.**
 
@@ -46,13 +46,16 @@
 
 8. Consider a system that has two CPUs, each CPU having two threads (hyper-threading). Suppose three programs, P0, P1, and P2, are started with run times of 5, 10 and 20 msec, respectively. How long will it take to complete the execution of these programs? Assume that all three programs are 100% CPU bound, do not block during execution, and do not change CPUs once assigned.  
 
+    <center>
+
     | CPU and Threads     | Execution Time | Program |
-    |:-------------------:|:--------------:|:--------:|
+    |:-------------------:|:-------------:|:--------:|
     | Core 1, Thread 1     | 5 ms          |   P0    |
     | Core 1, Thread 2     | 10 ms         |   P1    |
     | Core 2, Thread 1     | 20 ms         |   P2    |
     | **Total Time**       | **20 ms**     |         |
 
+    </center>
    1. Since the programs execute concurrently, it will take 20 ms to complete the execution of these programs.
 
 9. What is a trap instruction? Explain its use in operating systems.
