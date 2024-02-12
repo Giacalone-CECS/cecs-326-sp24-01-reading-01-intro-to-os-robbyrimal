@@ -42,11 +42,9 @@
     * [x] Disable all interrupts.  
     * [ ] Read the time-of-day clock.  
     * [ ] Set the time-of-day clock.
-    * [ ] Change the memory map.  
+    * [x] Change the memory map.  
 
 8. Consider a system that has two CPUs, each CPU having two threads (hyper-threading). Suppose three programs, P0, P1, and P2, are started with run times of 5, 10 and 20 msec, respectively. How long will it take to complete the execution of these programs? Assume that all three programs are 100% CPU bound, do not block during execution, and do not change CPUs once assigned.  
-
-    <center>
 
     | CPU and Threads     | Execution Time | Program |
     |:-------------------:|:-------------:|:--------:|
@@ -55,7 +53,6 @@
     | Core 2, Thread 1     | 20 ms         |   P2    |
     | **Total Time**       | **20 ms**     |         |
 
-    </center>
    1. Since the programs execute concurrently, it will take 20 ms to complete the execution of these programs.
 
 9. What is a trap instruction? Explain its use in operating systems.
