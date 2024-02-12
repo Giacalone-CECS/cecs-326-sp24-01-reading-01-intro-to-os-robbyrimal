@@ -36,7 +36,7 @@
 
     2. **Flexible** - Having a general purpose operating system that could be used on any device.
 
-    **These two goals can contradict with one another because optimizations made in consideration to the devices hardware could impact the flexibility to be run on all devices, and making a operating system with flexibility in mind could be detrimental to the stability and robustness across different devices.**
+        **These two goals can contradict with one another because optimizations made in consideration to the devices hardware could impact the flexibility to be run on all devices, and making a operating system with flexibility in mind could be detrimental to the stability and robustness across different devices.**
 
 7. Which of the following instructions should be allowed only in kernel mode?
     * [x] Disable all interrupts.  
