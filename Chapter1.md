@@ -1,5 +1,7 @@
 # Reading 1 - Introduction to OS  
 
+## Robby Rimal  
+
 1. What are the two main functions of an operating system?
 
    1. Providing abstractions to user programs -> Execute and provide services for application software
@@ -22,7 +24,7 @@
 
     2. The rest of the software runs on **user mode** which is only a subset of machine instructions available and applications at user level cannot modify or have direct access to system resources.  
 
-    * **Having two distinct modes allows the system to better utilize resources effectively, as user mode gets limited resources compared to the kernel.**
+    * **Having two distinct modes allows the system to better utilize resources effectively, as user mode gets limited resources compared to the kernel. If user needs more resources it can do system call. User can gain administrative privilege if require more system resource, but the system should what to do with processes.**
 
 5. On early computers, every byte of data read or written was handled by the CPU (i.e., there was no DMA). What implications does this have for multiprogramming?  
 
@@ -43,6 +45,8 @@
     * [ ] Read the time-of-day clock.  
     * [ ] Set the time-of-day clock.
     * [x] Change the memory map.  
+  
+    * System privileges **shouldn't** be needed to set/read clock.
 
 8. Consider a system that has two CPUs, each CPU having two threads (hyper-threading). Suppose three programs, P0, P1, and P2, are started with run times of 5, 10 and 20 msec, respectively. How long will it take to complete the execution of these programs? Assume that all three programs are 100% CPU bound, do not block during execution, and do not change CPUs once assigned.  
 
@@ -63,6 +67,6 @@
 
 10. Modern operating systems decouple a process address space from the machine’s physical memory. List two advantages of this design.
 
-    1. The operating system keeps part of the address space in main memory and park on disk, swapping as needed. It will create an abstraction of an address as the set of addresses a process may reference.  
+    1. The operating system keeps part of the address space in main memory and park on disk, swapping as needed. It will create an abstraction of an address as the set of addresses a process may reference. In cases where the machine goes into deep sleep/hibernate, it can dump everything from RAM into the swap partition in the hard disk because system can't use RAM in that state.
 
-    2. Processes can continue execution without waiting for additional space in main memory, improving overall system efficiency.
+    2. Processes can continue execution without waiting for additional space in main memory, improving overall system efficiency.  
