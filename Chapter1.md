@@ -70,3 +70,7 @@
     1. The operating system keeps part of the address space in main memory and park on disk, swapping as needed. It will create an abstraction of an address as the set of addresses a process may reference. In cases where the machine goes into deep sleep/hibernate, it can dump everything from RAM into the swap partition in the hard disk because system can't use RAM in that state.
 
     2. Processes can continue execution without waiting for additional space in main memory, improving overall system efficiency.  
+
+//alfred
+
+//robby you need to really fix your question number 1
